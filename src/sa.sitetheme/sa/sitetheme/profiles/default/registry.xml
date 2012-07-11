@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<registry>
+
+    <!-- collective.xdv settings -->
+
+    <record interface="collective.xdv.interfaces.ITransformSettings" field="domains">
+        <value>
+            <element>localhost:8499</element>
+        </value>
+    </record>
+
+    <record interface="collective.xdv.interfaces.ITransformSettings" field="rules">
+        <value>python://sa.sitetheme/static/rules.xml</value>
+    </record>
+
+    <record interface="collective.xdv.interfaces.ITransformSettings" field="theme">
+        <value>python://sa.sitetheme/static/index.html</value>
+    </record>
+
+    <record interface="collective.xdv.interfaces.ITransformSettings" field="absolute_prefix">
+        <value>/++resource++sa.sitetheme</value>
+    </record>
+
+</registry>

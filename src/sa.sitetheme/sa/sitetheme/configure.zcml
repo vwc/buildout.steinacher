@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="sa.sitetheme">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="sa.sitetheme"
+      directory="profiles/default"
+      description="Installs the sa.sitetheme package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+      
+  <browser:resourceDirectory
+          name="sa.sitetheme" directory="static" />
+  
+</configure>
