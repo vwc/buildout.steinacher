@@ -144,7 +144,7 @@ html, body {
 
 #header-wrapper {
     margin:0px auto;
-    width:960px;
+    width:980px;
 }
 
 #content-wrapper {
@@ -1346,3 +1346,9 @@ dl.actionMenu.activated dd div {
 }
 
 /* @end */
+/* additional */
+#praevention {
+    background: url(../images/praeventionsbutton.png) no-repeat 0px 0px transparent;
+    width: 160px;
+    height: 160px;
+}

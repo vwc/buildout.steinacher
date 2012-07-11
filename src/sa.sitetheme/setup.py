@@ -25,8 +25,12 @@ setup(name='sa.sitetheme',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.dexterity',
+          'plone.namedfile [blobs]',
+          'plone.app.theming',
+          'plone.app.themingplugins',
           # -*- Extra requirements: -*-
-          'collective.xdv',
+
       ],
       entry_points="""
       # -*- Entry points: -*-
