@@ -144,7 +144,7 @@ html, body {
 
 #header-wrapper {
     margin:0px auto;
-    width:980px;
+    width:960px;
 }
 
 #content-wrapper {
@@ -155,6 +155,10 @@ html, body {
 #main-content {
     border: 0px solid red;
     width:960px;
+}
+
+#inner-content {
+    margin-top:-100px;
 }
 
 #fg-base-edit {
@@ -173,7 +177,8 @@ html, body {
 #header {
     background:url("../images/header_bg.png") no-repeat 0 0 transparent;
     width:960px;
-    
+    display:block;
+    margin-top: -108px;
 }
 
 #header a {
@@ -186,7 +191,8 @@ html, body {
     display:block;
     background:url(../images/logo.png) no-repeat 0% 0% transparent;
     margin-left:100px;
-    margin-top: -40px;
+    margin-top: -20px;
+    overflow: hidden;
 }
 
 #search {
@@ -250,7 +256,7 @@ html, body {
 
 #navigation ul {
     float:right;
-    margin-top: -200px;
+    margin-top: -220px;
 }
 
 #navigation li {
@@ -261,6 +267,7 @@ html, body {
 #navigation a {
     padding: 0 5px;
     color: #a10d59;
+    text-transform: uppercase;
 }
 
 #navigation a:hover {
@@ -1353,4 +1360,28 @@ dl.actionMenu.activated dd div {
     background: url(../images/praeventionsbutton.png) no-repeat 0px 0px transparent;
     width: 160px;
     height: 160px;
+    display:block;
+}
+
+#leftbar {
+    color: #666666;
+}
+
+#leftbar a {
+    color: #A10D59;
+}
+
+#leftbar a:hover {
+    color: #92287F;
+}
+
+.portletHeader {
+    font-family: 'BebasNeueRegular',sans-serif;
+    font-size:1.25em;
+    font-weight: bold;
+    color: #B5B7B8;
+}
+
+.portlet {
+    border-bottom: 1px solid #DDD;
 }
