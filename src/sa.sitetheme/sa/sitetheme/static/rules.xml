@@ -41,16 +41,16 @@
         <!-- Editbar moves to the top of the window -->
         <drop css:theme="#editbar-wrapper"
             css:if-content="#anon-personalbar" />
-        <replace css:theme-children="#editbar" css:content="#edit-bar" />
+        <before css:theme="#content" css:content="#edit-bar" />
         
         <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
 
 	    <replace css:content="#portal-siteactions li" css:theme-children="#actions" />
 
 	    <!-- navigation -->
-        <replace css:content="#portal-globalnav li" css:theme-children="#main-nav" />
-
-	    <!-- Copy over the contents of the page body -->
+        <replace css:content=".portletItem ul" css:theme-children="#navigation" />
+	    
+        <!-- Copy over the contents of the page body -->
 	    <replace css:content-children="#content" css:theme-children="#content" />
         <!-- Portal Columns -->
         <replace css:content-children="#portal-column-one > *" css:theme-children="#sidebar-left" />

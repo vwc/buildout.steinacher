@@ -219,7 +219,10 @@ html, body {
 #top-nav {
     font-family: 'BebasNeueRegular'sans-serif; 
     font-size: 80%;
-    padding: 20px 0 0 780px;
+    padding-top:20px;
+}
+#top-nav ul {
+    float:right;
 }
 
 #top-nav li {
@@ -241,12 +244,19 @@ html, body {
 
 #navigation {
     font-family: 'BebasNeueRegular', sans-serif; 
-    margin:-217px 0 0 630px;
+/*    margin:-217px 0 0 630px; */
     font-size: 1.5em;
 }
 
-#navigation li {
+#navigation ul {
+    float:right;
+    margin-top: -200px;
 }
+
+#navigation li {
+    float:left;
+}
+
 
 #navigation a {
     padding: 0 5px;
@@ -655,14 +665,6 @@ dd.image-caption {
     border: 0.3em solid #ddd;
 }
 
-#edit-bar {
-    background-color: #000;
-    border: 0.25em solid #000;
-    font-size: 80%;
-    min-height: 2em;
-    margin-bottom: 1em;
-    padding-top: 0.05em;
-}
 #content-views {
     float: left;
     background-color: #000;
