@@ -28,10 +28,10 @@
             <drop theme="/html/head/script" />
             <drop theme="/html/head/link" />
         
-        <!-- Add favicon
+        <!-- Add favicon -->
             <after theme-children="/html/head">
-                <link rel="shortcut icon" href="/++theme++example.sitetheme/images/favicon.ico" type="image/x-icon" />
-            </after> -->
+                <link rel="shortcut icon" href="/++theme++sa.sitetheme/images/favicon.ico" type="image/x-icon" />
+            </after>
         
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->

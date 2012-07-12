@@ -178,7 +178,7 @@ html, body {
     background:url("../images/header_bg.png") no-repeat 0 0 transparent;
     width:960px;
     display:block;
-    margin-top: -108px;
+    margin-top: -106px;
 }
 
 #header a {
@@ -1373,6 +1373,14 @@ dl.actionMenu.activated dd div {
 
 #leftbar a:hover {
     color: #92287F;
+}
+
+#leftbar .portlet {
+    margin-top:10px;
+}
+
+#leftbar .splashBoxContent {
+    margin-top:10px;
 }
 
 .portletHeader {
