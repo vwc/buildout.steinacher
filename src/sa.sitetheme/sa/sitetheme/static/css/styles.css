@@ -193,6 +193,7 @@ html, body {
     margin-left:100px;
     margin-top: -20px;
     overflow: hidden;
+    text-indent: -20000px;
 }
 
 #search {
