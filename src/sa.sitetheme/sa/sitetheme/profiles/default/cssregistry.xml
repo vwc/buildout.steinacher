@@ -3,16 +3,14 @@
 
  <!-- Set conditions on stylesheets we don't want to pull in -->
  <stylesheet
-     expression="not:request/HTTP_X_XDV | nothing"
+     expression="not:request/HTTP_X_THEME_ENABLED | nothing"
      id="public.css"
      />
 
- <!-- Add new stylesheets -->
-
  <stylesheet title="" authenticated="False" cacheable="True"
     compression="safe" conditionalcomment="" cookable="True" enabled="on"
-    expression="request/HTTP_X_XDV | nothing"
-    id="++resource++sa.sitetheme/css/styles.css" media="" rel="stylesheet"
+    expression="request/HTTP_X_THEME_ENABLED | nothing"
+    id="++theme++sa.sitetheme/css/styles.css" media="" rel="stylesheet"
     rendering="link"
     applyPrefix="True"
     />

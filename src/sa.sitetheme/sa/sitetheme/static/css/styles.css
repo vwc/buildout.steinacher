@@ -157,6 +157,10 @@ html, body {
     width:960px;
 }
 
+#inner-content {
+    margin-top:-100px;
+}
+
 #fg-base-edit {
     background: url("../images/contacts.png") no-repeat 50% 0 transparent;
     padding-top: 200px;
@@ -173,7 +177,8 @@ html, body {
 #header {
     background:url("../images/header_bg.png") no-repeat 0 0 transparent;
     width:960px;
-    
+    display:block;
+    margin-top: -106px;
 }
 
 #header a {
@@ -186,7 +191,9 @@ html, body {
     display:block;
     background:url(../images/logo.png) no-repeat 0% 0% transparent;
     margin-left:100px;
-    margin-top: -40px;
+    margin-top: -20px;
+    overflow: hidden;
+    text-indent: -20000px;
 }
 
 #search {
@@ -219,7 +226,10 @@ html, body {
 #top-nav {
     font-family: 'BebasNeueRegular'sans-serif; 
     font-size: 80%;
-    padding: 20px 0 0 780px;
+    padding-top:20px;
+}
+#top-nav ul {
+    float:right;
 }
 
 #top-nav li {
@@ -241,16 +251,24 @@ html, body {
 
 #navigation {
     font-family: 'BebasNeueRegular', sans-serif; 
-    margin:-217px 0 0 630px;
+/*    margin:-217px 0 0 630px; */
     font-size: 1.5em;
 }
 
-#navigation li {
+#navigation ul {
+    float:right;
+    margin-top: -220px;
 }
+
+#navigation li {
+    float:left;
+}
+
 
 #navigation a {
     padding: 0 5px;
     color: #a10d59;
+    text-transform: uppercase;
 }
 
 #navigation a:hover {
@@ -655,14 +673,6 @@ dd.image-caption {
     border: 0.3em solid #ddd;
 }
 
-#edit-bar {
-    background-color: #000;
-    border: 0.25em solid #000;
-    font-size: 80%;
-    min-height: 2em;
-    margin-bottom: 1em;
-    padding-top: 0.05em;
-}
 #content-views {
     float: left;
     background-color: #000;
@@ -1346,3 +1356,41 @@ dl.actionMenu.activated dd div {
 }
 
 /* @end */
+/* additional */
+#praevention {
+    background: url(../images/praeventionsbutton.png) no-repeat 0px 0px transparent;
+    width: 160px;
+    height: 160px;
+    display:block;
+}
+
+#leftbar {
+    color: #666666;
+}
+
+#leftbar a {
+    color: #A10D59;
+}
+
+#leftbar a:hover {
+    color: #92287F;
+}
+
+#leftbar .portlet {
+    margin-top:10px;
+}
+
+#leftbar .splashBoxContent {
+    margin-top:10px;
+}
+
+.portletHeader {
+    font-family: 'BebasNeueRegular',sans-serif;
+    font-size:1.25em;
+    font-weight: bold;
+    color: #B5B7B8;
+}
+
+.portlet {
+    border-bottom: 1px solid #DDD;
+}

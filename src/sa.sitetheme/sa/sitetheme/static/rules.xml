@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules
-    xmlns="http://namespaces.plone.org/xdv"
-    xmlns:css="http://namespaces.plone.org/xdv+css"
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-    <!--<xsl:output
-        doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-        doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />-->
-
-        <!-- Rules applying to a standard Plone web page -->
+    
+    <theme href="theme.html" css:if-content="#visual-portal-wrapper" />
+    
+    <!-- Apply rules to a standard Plone Webpage -->
     <rules css:if-content="#visual-portal-wrapper">
-        <theme href="index.html" />
+
+        <notheme if="$ajax_load" />
     
         <!-- Head: title -->
-        <replace theme="/html/head/title" content="/html/head/title" />
+        <replace css:theme="title" css:content="title" />
         <!-- Base tag -->
-        <replace theme="/html/head/base" content="/html/head/base" />
-    
-        <!-- Add meta tags -->
-        <drop theme="/html/head/meta" />
-        <append content="/html/head/meta" theme="/html/head" />
-    
+        <replace css:theme="base" css:content="base" />
+        
+        <after content="/html/head/meta" theme-children="/html/head" />
+        
         <!-- Copy style, script and link tags in the order they appear in the content -->
-        <append
+        <after
             content="/html/head/style | /html/head/script | /html/head/link"
-            theme="/html/head"
+            theme-children="/html/head"
             />
-    
+        
             <drop theme="/html/head/style" />
             <drop theme="/html/head/script" />
             <drop theme="/html/head/link" />
-    
+        
+        <!-- Add favicon -->
+            <after theme-children="/html/head">
+                <link rel="shortcut icon" href="/++theme++sa.sitetheme/images/favicon.ico" type="image/x-icon" />
+            </after>
+        
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
-        <prepend content="/html/body/@class" theme="/html/body" />
-        <prepend content="/html/body/@id"    theme="/html/body" />
-        <prepend content="/html/body/@dir"   theme="/html/body" />
-        
-        <!-- favicon setup -->
-        <append theme="/html/head">
-            <link rel="shortcut icon" href="/++resource++sa.sitetheme/images/favicon.ico" type="image/x-icon" />
-        </append>
-        
-        <prepend content='//*[@id="portal-logo"]/@href' css:theme='#logo' />
-        
-        <!-- Copy the Navigation -->
-        <copy content='//*[@id="portal-globalnav"]' theme='//*[@id="navigation"]/ul' />
-        
-        <!-- Copy the edit bar -->
-	    <replace content='//*[@id="edit-bar"]'	theme='//*[@id="editbar"]' />
-	    
-	    <!-- Copy over the contents of the page body -->
-	    <replace content='//*[@id="content"]'    theme='//*[@id="content"]' />
+        <merge attributes="class" css:content="body" css:theme="body" />
+        <copy attributes="id dir" css:content="body" css:theme="body" />
 
-	    <!-- Drop placeholder items to make the site validate -->
-	    <drop content='//*[@class="portletTopLeft"]' />
-	    <drop content='//*[@class="portletTopRight"]' />
-	    <drop content='//*[@class="portletBottomLeft"]' />
-	    <drop content='//*[@class="portletBottomRight"]' />
-	
+        <!-- Editbar moves to the top of the window -->
+        <drop css:theme="#editbar-wrapper"
+            css:if-content="#anon-personalbar" />
+        <before css:theme="#content" css:content="#edit-bar" />
+        
+        <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
+
+	    <replace css:content="#portal-siteactions li" css:theme-children="#actions" />
+
+	    <!-- navigation -->
+        <replace css:content=".portletItem ul" css:theme-children="#navigation" />
+	    
+        <!-- Copy over the contents of the page body -->
+	    <replace css:content-children="#content" css:theme-children="#content" />
+        <!-- Portal Columns -->
+        <replace css:content-children="#portal-column-one > *" css:theme-children="#sidebar-left" />
+        <replace css:content-children="#portal-column-two > *" css:theme-children="#leftbar" /> 
+        
+        <!-- Drop placeholder items to make the site validate -->
+	    <drop css:content="span.portletTopLeft" />
+	    <drop css:content="span.portletTopRight" />
+	    <drop css:content="span.portletBottomLeft" />
+	    <drop css:content="span.portletBottomRight" />
+        <drop css:content="a.state-published img" />
+
+ 
+
     </rules>
     
 </rules>
