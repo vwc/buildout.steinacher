@@ -22,7 +22,9 @@
         <div tal:replace="structure provider:plone.abovecontentbody" />
         
         <div class="visualClear"><!-- --></div>
-        
+        <img tal:define="scales context/@@images"
+          tal:replace="structure python: scales.tag('image', scale='mini')"
+        />
         <div tal:condition="context/maintext"
           tal:content="structure context/maintext/output" />
 

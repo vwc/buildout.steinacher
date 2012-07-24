@@ -43,7 +43,7 @@
                         </div>
                         <div id="ov-meat">
                             <p tal:condition="item_obj/preview"
-                                tal:content="structure item_obj/preview">Test Preview</p>
+                                tal:content="structure item_obj/preview/output">Test Preview</p>
                             <p tal:condition="not:item_obj/preview" tal:content="item/Description">
                             Subtitle
                             </p>
