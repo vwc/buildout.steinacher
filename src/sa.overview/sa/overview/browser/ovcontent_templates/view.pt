@@ -13,17 +13,18 @@
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
-        <h1 class="documentFirstHeading" tal:content="context/title" />
+        <h1 class="documentFirstHeading" tal:content="context/Title" />
         
         <div tal:replace="structure provider:plone.belowcontenttitle" />
         
-        <p class="documentDescription" tal:content="context/description" />
+        <p class="documentDescription" tal:content="context/Description" />
 
         <div tal:replace="structure provider:plone.abovecontentbody" />
         
         <div class="visualClear"><!-- --></div>
         
-        <div tal:content="structure context/maintext" />
+        <div tal:condition="context/maintext"
+          tal:content="structure context/maintext/output" />
 
         <div tal:replace="structure provider:plone.belowcontentbody" />
 
