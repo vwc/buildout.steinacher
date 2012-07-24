@@ -14,7 +14,7 @@
         <h1 class="documentFirstHeading"
           tal:content="context/Title">Title inserted here</h1>
       </div>
-      <div class="image-left">
+      <div class="image-right">
         <img tal:define="scales context/@@images"
           tal:replace="structure python: scales.tag('image', scale='mini')"
           />

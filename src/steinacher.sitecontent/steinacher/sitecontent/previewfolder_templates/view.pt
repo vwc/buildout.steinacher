@@ -15,14 +15,22 @@
         tal:repeat="item view/content_pages">
         <div class="row">
           <div class="cell position-0 width-1:3">
+            <img tal:define="item_obj item/getObject;
+                             scales item_obj/@@images"
+              tal:replace="structure python: scales.tag('image',
+                           width=200, height=200, direction='down')"
+              />
           </div>
-          <div class="cell position-1:3 width-1:3">
+          <div class="cell position-1:3 width-2:3">
             <h2><a href="" tal:attributes="href item/getURL"
                 tal:content="item/Title" /></h2>
             <p tal:content="item/Description" />
+              <div class="lead" tal:define="item_id item/getId">
+                <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/tilebox-${item_id}" />
+              </div>
             <a href="" class="link-more"
               tal:attributes="href item/getURL">
-              Read more&hellip;</a>
+              Mehr Info&hellip;</a>
           </div>
         </div>
         <div class="visualClear"><!-- --></div>
