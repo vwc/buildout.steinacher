@@ -608,6 +608,11 @@ dl.portlet ol {
     font-size:75%;
 }
 
+a.link-more {
+    float:right;
+    font-size: 13px;
+}
+
 .field img {
     margin-right:20px;
     float:left;
