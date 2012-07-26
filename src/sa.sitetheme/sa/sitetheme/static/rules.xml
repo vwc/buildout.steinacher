@@ -48,13 +48,13 @@
 	    <replace css:content="#portal-siteactions li" css:theme-children="#actions" />
 
 	    <!-- navigation -->
-        <replace css:content=".portletItem ul" css:theme-children="#navigation" />
+        <replace css:content="#portal-globalnav li" css:theme-children="#main-navigation" />
 	    
         <!-- Copy over the contents of the page body -->
 	    <replace css:content-children="#content" css:theme-children="#content" />
         <!-- Portal Columns -->
-        <replace css:content-children="#portal-column-one > *" css:theme-children="#sidebar-left" />
-        <replace css:content-children="#portal-column-two > *" css:theme-children="#leftbar" /> 
+        <!--<replace css:content-children="#portal-column-one > *" css:theme-children="#sidebar-left" />-->
+        <replace css:content-children="#portal-column-one > *" css:theme-children="#leftbar" /> 
         
         <!-- Drop placeholder items to make the site validate -->
 	    <drop css:content="span.portletTopLeft" />

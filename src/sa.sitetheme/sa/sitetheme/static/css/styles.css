@@ -266,7 +266,7 @@ html, body {
 
 
 #navigation a {
-    padding: 0 5px;
+    padding: 10px 5px 0;
     color: #a10d59;
     text-transform: uppercase;
 }
@@ -277,7 +277,7 @@ html, body {
     color: #b5b7b8;
 }
 
-#navigation .selected {
+#navigation .selected a {
     background: url("../images/nav_arrow.png") no-repeat 50% 0 transparent;
     padding-top:10px;
     color: #b5b7b8;
