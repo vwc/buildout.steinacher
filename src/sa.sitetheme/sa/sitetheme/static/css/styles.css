@@ -818,7 +818,8 @@ div.overlay div.close {
 
 .pb-ajax .documentActions {display:none}
 
-div.overlay div.close span {
+div.overlay div.close span,
+div.overlay div.close a {
     display: block;
     height: 1px;
     margin: -1px 0 0 -1px;
