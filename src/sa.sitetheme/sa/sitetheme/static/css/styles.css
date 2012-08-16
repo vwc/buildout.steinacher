@@ -1374,6 +1374,10 @@ dl.actionMenu.activated dd div {
     color: #666666;
 }
 
+#leftbar p{
+    font-size:12px;
+}
+
 #leftbar a {
     color: #A10D59;
 }
