@@ -25,7 +25,7 @@ setup(name='sa.overview',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'plone.app.dexterity',
+          'plone.app.dexterity [grok,relations]',
           'collective.autopermission',
           # -*- Extra requirements: -*-
       ],
@@ -36,6 +36,6 @@ setup(name='sa.overview',
       target = plone
       """,
       setup_requires=["PasteScript"],
-      paster_plugins = ["ZopeSkel"],
+      paster_plugins=["ZopeSkel"],
 
       )
